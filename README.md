@@ -1,6 +1,6 @@
-# SilverStripe Elemental Blocks
+# SilverStripe Elemental Sponsors Block
 
-Sponsors element for the SilverStripe Elemental module
+Sponsors element for the [SilverStripe Elemental](https://github.com/dnadesign/silverstripe-elemental) module
 
 [![Build Status](https://travis-ci.org/dynamic/silverstripe-elemental-sponsors.svg?branch=master)](https://travis-ci.org/dynamic/silverstripe-elemental-sponsors)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dynamic/silverstripe-elemental-sponsors/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dynamic/silverstripe-elemental-sponsors/?branch=master)
@@ -16,7 +16,29 @@ Sponsors element for the SilverStripe Elemental module
 ## Requirements
 
 - SilverStripe ^4.0
+- SilverStripe Elemental ^2.0
 
 ## Installation
 
 `composer require dynamic/silverstripe-elemental-sponsors`
+
+## Usage
+
+Elemental Sponsors Block will add the following to your site:
+- Sponsors
+
+## Getting more elements
+
+Other elemental modules by Dynamic:
+
+* SilverStripe Elemental Blocks
+	* [Packagist](https://packagist.org/packages/dynamic/silverstripe-elemental-blocks)
+	* [GitHub](https://github.com/dynamic/silverstripe-elemental-blocks)
+* [SilverStripe Elemental Accordion](https://github.com/dynamic/silverstripe-elemental-accordion-block)  
+* [SilverStripe Elemental Flexslider](https://github.com/dynamic/silverstripe-elemental-flexslider)  
+* [SilverStripe Elemental Blog](https://github.com/dynamic/silverstripe-elemental-blog)  
+* [SilverStripe Elemental Testimonials](https://github.com/dynamic/silverstripe-elemental-testimonials) 
+
+## Configuration
+
+See [SilverStripe Elemental Configuration](https://github.com/dnadesign/silverstripe-elemental#configuration)

@@ -1,15 +1,15 @@
 <?php
 
-namespace Dynamic\Elements\Tests\Model;
+namespace Dynamic\Elements\Sponsors\Tests\Model;
 
-use Dynamic\Elements\Model\Sponsor;
-use Sheadawson\Linkable\Forms\LinkField;
+use Dynamic\Elements\Sponsors\Model\Sponsor;
 use SilverStripe\Dev\SapphireTest;
-use SilverStripe\Security\Member;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\ValidationResult;
 
 /**
  * Class SponsorTest
- * @package Dynamic\Elements\Tests\Model
+ * @package Dynamic\Elements\Sponsors\Tests\Model
  */
 class SponsorTest extends SapphireTest
 {
@@ -23,75 +23,30 @@ class SponsorTest extends SapphireTest
      */
     public function testGetCMSFields()
     {
-        $sponsor = Sponsor::singleton();
-        $this->assertInstanceOf(LinkField::class, $sponsor->getCMSFields()->dataFieldByName('LinkID'));
+        $sponsor = $this->objFromFixture(Sponsor::class, 'one');
+        $this->assertInstanceOf(FieldList::class, $sponsor->getCMSFields());
     }
 
     /**
      *
      */
-    public function testCanView()
+    public function testValidate()
     {
-        $object = $this->objFromFixture(Sponsor::class, 'one');
+        $sponsor = $this->objFromFixture(Sponsor::class, 'one');
+        $result = $sponsor->validate();
+        $this->assertInstanceOf(ValidationResult::class, $result);
+        $this->assertFalse($result->isValid());
+        $this->assertContains([
+            'message' => 'A logo is required before you can save',
+            'fieldName' => '',
+            'messageType' => 'error',
+            'messageCast' => 'text',
 
-        $admin = $this->objFromFixture(Member::class, 'admin');
-        $this->assertTrue($object->canView($admin));
+        ], $result->getMessages());
 
-        $siteowner = $this->objFromFixture(Member::class, 'site-owner');
-        $this->assertTrue($object->canView($siteowner));
-
-        $member = $this->objFromFixture(Member::class, 'default');
-        $this->assertNull($object->canView($member));
-    }
-
-    /**
-     *
-     */
-    public function testCanEdit()
-    {
-        $object = $this->objFromFixture(Sponsor::class, 'one');
-
-        $admin = $this->objFromFixture(Member::class, 'admin');
-        $this->assertTrue($object->canEdit($admin));
-
-        $siteowner = $this->objFromFixture(Member::class, 'site-owner');
-        $this->assertTrue($object->canEdit($siteowner));
-
-        $member = $this->objFromFixture(Member::class, 'default');
-        $this->assertNull($object->canEdit($member));
-    }
-
-    /**
-     *
-     */
-    public function testCanDelete()
-    {
-        $object = $this->objFromFixture(Sponsor::class, 'one');
-
-        $admin = $this->objFromFixture(Member::class, 'admin');
-        $this->assertTrue($object->canDelete($admin));
-
-        $siteowner = $this->objFromFixture(Member::class, 'site-owner');
-        $this->assertTrue($object->canDelete($siteowner));
-
-        $member = $this->objFromFixture(Member::class, 'default');
-        $this->assertNull($object->canDelete($member));
-    }
-
-    /**
-     *
-     */
-    public function testCanCreate()
-    {
-        $object = $this->objFromFixture(Sponsor::class, 'one');
-
-        $admin = $this->objFromFixture(Member::class, 'admin');
-        $this->assertTrue($object->canCreate($admin));
-
-        $siteowner = $this->objFromFixture(Member::class, 'site-owner');
-        $this->assertTrue($object->canCreate($siteowner));
-
-        $member = $this->objFromFixture(Member::class, 'default');
-        $this->assertNull($object->canCreate($member));
+        $sponsor = $this->objFromFixture(Sponsor::class, 'five');
+        $result = $sponsor->validate();
+        $this->assertInstanceOf(ValidationResult::class, $result);
+        $this->assertTrue($result->isValid());
     }
 }

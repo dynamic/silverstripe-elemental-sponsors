@@ -1,9 +1,9 @@
 <?php
 
-namespace Dynamic\Elements\Elements;
+namespace Dynamic\Elements\Sponsors\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
-use Dynamic\Elements\Model\Sponsor;
+use Dynamic\Elements\Sponsors\Model\Sponsor;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
 use SilverStripe\ORM\FieldType\DBField;
@@ -12,11 +12,11 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 /**
  * Class ElementSponsor
- * @package Dynamic\Elements\Elements
+ * @package Dynamic\Elements\Sponsors\Elements
  *
  * @property int $Limit
  * @property string $Content
- * @method ManyManyList|DataList $Sponsors
+ * @method \SilverStripe\ORM\ManyManyList $Sponsors
  */
 class ElementSponsor extends BaseElement
 {

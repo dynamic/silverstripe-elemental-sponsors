@@ -17,11 +17,10 @@
   ],
   "require": {
     "dnadesign/silverstripe-elemental": "^2.0@dev",
-    "sheadawson/silverstripe-linkable": "^2.0@dev",
+    "dynamic/silverstripe-elemental-baseobject": "^1.0",
     "silverstripe/recipe-cms": "^1.0@dev",
     "silverstripe/vendor-plugin": "^1.0@dev",
-    "symbiote/silverstripe-gridfieldextensions": "^3.0",
-    "unclecheese/display-logic": "^2.0@dev"
+    "symbiote/silverstripe-gridfieldextensions": "^3.0"
   },
   "require-dev": {
     "phpunit/PHPUnit": "^5.7",
@@ -37,8 +36,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Dynamic\\Elements\\": "src/",
-      "Dynamic\\Elements\\Test\\": "tests/"
+      "Dynamic\\Elements\\Sponsors\\": "src/",
+      "Dynamic\\Elements\\Sponsors\\Test\\": "tests/"
     }
   },
   "minimum-stability": "dev",

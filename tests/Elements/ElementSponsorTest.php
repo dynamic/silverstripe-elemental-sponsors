@@ -1,8 +1,8 @@
 <?php
 
-namespace Dynamic\Elements\Tests\Elements;
+namespace Dynamic\Elements\Sponsors\Tests\Elements;
 
-use Dynamic\Elements\Elements\ElementSponsor;
+use Dynamic\Elements\Sponsors\Elements\ElementSponsor;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
@@ -10,7 +10,7 @@ use SilverStripe\Forms\NumericField;
 
 /**
  * Class ElementSponsorTest
- * @package Dynamic\Elements\Tests\Elements
+ * @package Dynamic\Elements\Sponsors\Tests\Elements
  */
 class ElementSponsorTest extends SapphireTest
 {

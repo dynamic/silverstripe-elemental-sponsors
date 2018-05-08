@@ -45,7 +45,7 @@ SilverStripe\Security\Member:
     Email: "user"
     Password: "user"
 
-Dynamic\Elements\Model\Sponsor:
+Dynamic\Elements\Sponsors\Model\Sponsor:
   one:
     Title: "Dynamic"
   two:
@@ -56,13 +56,15 @@ Dynamic\Elements\Model\Sponsor:
     Title: "Falcon Rockets"
   five:
     Title: "Green Bay Packers"
+    Name: "The Bears still suck"
+    ImageID: 1
 
-Dynamic\Elements\Elements\ElementSponsor:
+Dynamic\Elements\Sponsors\Elements\ElementSponsor:
   one:
     Title: "The sports"
     Limit: 2
-    Sponsors: =>Dynamic\Elements\Model\Sponsor.one,=>Dynamic\Elements\Model\Sponsor.three,=>Dynamic\Elements\Model\Sponsor.five,=>Dynamic\Elements\Model\Sponsor.four
+    Sponsors: =>Dynamic\Elements\Sponsors\Model\Sponsor.one,=>Dynamic\Elements\Sponsors\Model\Sponsor.three,=>Dynamic\Elements\Sponsors\Model\Sponsor.five,=>Dynamic\Elements\Sponsors\Model\Sponsor.four
   two:
     Title: "The others"
     Limit: 0
-    Sponsors: =>Dynamic\Elements\Model\Sponsor.one,=>Dynamic\Elements\Model\Sponsor.two,=>Dynamic\Elements\Model\Sponsor.three,=>Dynamic\Elements\Model\Sponsor.four,=>Dynamic\Elements\Model\Sponsor.five
+    Sponsors: =>Dynamic\Elements\Sponsors\Model\Sponsor.one,=>Dynamic\Elements\Sponsors\Model\Sponsor.two,=>Dynamic\Elements\Sponsors\Model\Sponsor.three,=>Dynamic\Elements\Sponsors\Model\Sponsor.four,=>Dynamic\Elements\Sponsors\Model\Sponsor.five
