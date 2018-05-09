@@ -4,11 +4,15 @@ namespace Dynamic\Elements\Sponsors\Model;
 
 use Dynamic\BaseObject\Model\BaseElementObject;
 use Dynamic\Elements\Sponsors\Elements\ElementSponsor;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Control\Director;
 use SilverStripe\Forms\FieldList;
 
 /**
  * Class Sponsor
  * @package Dynamic\Elements\Sponsors\Model
+ *
+ * @method \SilverStripe\ORM\ManyManyList SponsorsElements()
  */
 class Sponsor extends BaseElementObject
 {

@@ -16,7 +16,7 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
  *
  * @property int $Limit
  * @property string $Content
- * @method \SilverStripe\ORM\ManyManyList $Sponsors
+ * @method \SilverStripe\ORM\ManyManyList Sponsors()
  */
 class ElementSponsor extends BaseElement
 {
@@ -73,7 +73,7 @@ class ElementSponsor extends BaseElement
     );
 
     /**
-     * @return DBHTMLText
+     * @return \SilverStripe\ORM\FieldType\DBHTMLText
      */
     public function ElementSummary()
     {
