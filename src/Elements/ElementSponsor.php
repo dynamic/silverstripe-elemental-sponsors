@@ -23,7 +23,7 @@ class ElementSponsor extends BaseElement
     /**
      * @var string
      */
-    private static $icon = 'vendor/dnadesign/silverstripe-elemental/images/base.svg';
+    private static $icon = 'font-icon-external-link';
 
     /**
      * @var string
@@ -73,11 +73,35 @@ class ElementSponsor extends BaseElement
     );
 
     /**
-     * @return \SilverStripe\ORM\FieldType\DBHTMLText
+     * Set to false to prevent an in-line edit form from showing in an elemental area. Instead the element will be
+     * clickable and a GridFieldDetailForm will be used.
+     *
+     * @config
+     * @var bool
      */
-    public function ElementSummary()
+    private static $inline_editable = false;
+
+    /**
+     * @return string
+     */
+    public function getSummary()
     {
-        return DBField::create_field('HTMLText', $this->Content)->Summary(20);
+        if ($this->Sponsors()->count() == 1) {
+            $label = ' sponsor';
+        } else {
+            $label = ' sponsors';
+        }
+        return DBField::create_field('HTMLText', $this->Sponsors()->count() . $label)->Summary(20);
+    }
+
+    /**
+     * @return array
+     */
+    protected function provideBlockSchema()
+    {
+        $blockSchema = parent::provideBlockSchema();
+        $blockSchema['content'] = $this->getSummary();
+        return $blockSchema;
     }
 
     /**
@@ -99,7 +123,7 @@ class ElementSponsor extends BaseElement
                     ->setRows(8);
 
                 $fields->dataFieldByName('Limit')
-                    ->setTitle('Sponsors to show')
+                    ->setTitle('Number of sponsors to show')
                     ->setDescription('0 will show all sponsors');
 
                 if ($this->exists()) {
