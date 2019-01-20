@@ -22,10 +22,10 @@ class ElementSponsorTest extends SapphireTest
     /**
      *
      */
-    public function testElementSummary()
+    public function testGetSummary()
     {
         $element = $this->objFromFixture(ElementSponsor::class, 'one');
-        $this->assertEquals($element->dbObject('Content')->Summary(20), $element->ElementSummary());
+        $this->assertEquals('4 sponsors', $element->getSummary());
     }
 
     /**
