@@ -38,7 +38,7 @@ class SponsorTest extends SapphireTest
         $this->assertFalse($result->isValid());
         $this->assertContains([
             'message' => 'A logo is required before you can save',
-            'fieldName' => NULL,
+            'fieldName' => null,
             'messageType' => 'error',
             'messageCast' => 'text',
 
