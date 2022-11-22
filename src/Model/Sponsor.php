@@ -47,6 +47,7 @@ class Sponsor extends BaseElementObject
 
         $fields->dataFieldByName('Image')
             ->setTitle('Logo')
+            ->setFolderName('Uploads/Sponsors')
             ->setDescription('The logo to display for the sponsor');
 
         return $fields;
@@ -59,8 +60,8 @@ class Sponsor extends BaseElementObject
     {
         $result = parent::validate();
 
-        if (!$this->ImageID) {
-            $result->addError('A logo is required before you can save');
+        if (!$this->Title) {
+            $result->addError('A title is required before you can save');
         }
 
         return $result;
