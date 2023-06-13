@@ -16,13 +16,23 @@
     }
   ],
   "require": {
-    "dnadesign/silverstripe-elemental": "^4.0",
-    "dynamic/silverstripe-elemental-baseobject": "^3.0",
-    "symbiote/silverstripe-gridfieldextensions": "^3.0"
+    "dnadesign/silverstripe-elemental": "^5",
+    "dynamic/silverstripe-elemental-baseobject": "^4",
+    "symbiote/silverstripe-gridfieldextensions": "^4"
   },
   "require-dev": {
-    "silverstripe/recipe-testing": "^2"
+    "silverstripe/recipe-testing": "^3"
   },
+  "repositories": [
+    {
+        "type": "vcs",
+        "url": "git@github.com:jsirish/silverstripe-link.git"
+    },
+    {
+        "type": "vcs",
+        "url": "git@github.com:jsirish/silverstripe-linkfield.git"
+    }
+],
   "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {
@@ -38,5 +48,10 @@
       "silverstripe/recipe-plugin": true
     },
     "process-timeout": 600
+  },
+  "extra": {
+      "branch-alias": {
+          "dev-master": "4.x-dev"
+      }
   }
 }

@@ -12,10 +12,9 @@ Sponsors element for the [SilverStripe Elemental](https://github.com/dnadesign/s
 
 ## Requirements
 
-* silverstripe/recipe-cms ^4
-* dnadesign/silverstripe-elemental ^4
-* dynamic/silverstripe-elemental-baseobject ^3
-* symbiote/silverstripe-gridfieldextensions ^3.0
+* dnadesign/silverstripe-elemental ^5
+* dynamic/silverstripe-elemental-baseobject ^4
+* symbiote/silverstripe-gridfieldextensions ^4
 
 ## Installation
 
