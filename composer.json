@@ -18,24 +18,12 @@
   "require": {
     "dnadesign/silverstripe-elemental": "^5",
     "dynamic/silverstripe-elemental-baseobject": "^4",
-    "gorriecoe/silverstripe-link": "dev-refactor/allowSS5 as 1.4.1",
-    "gorriecoe/silverstripe-linkfield": "dev-refactor/gridfieldextensions4 as 1.0.3",
     "silverstripe/framework": "^5",
     "symbiote/silverstripe-gridfieldextensions": "^4"
   },
   "require-dev": {
     "silverstripe/recipe-testing": "^3"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@github.com:jsirish/silverstripe-link.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:jsirish/silverstripe-linkfield.git"
-    }
-  ],
   "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {
