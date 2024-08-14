@@ -6,13 +6,12 @@
         <% loop $SponsorsList %>
             <div class="col-md-3 card sponsors__list__sponsor">
                 <% if $Image %>
-                    <% if $ElementLink.LinkURL %><a href="$ElementLink.LinkURL"<% if $ElementLink.OpenInNewWindow %> target="_blank"<% end_if %> title="Go to $Title.ATT"><% end_if %>
+                    <% if $ElementLink.URL %><a href="$ElementLink.URL" title="$ElementLink.Title"<% if $ElementLink.OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>><% end_if %>
                     <img src="$Image.Pad(576,576).URL" class="img-fluid card-img-top" alt="$Title.ATT"><% end_if %>
-                    <% if $ElementLink.LinkURL %></a><% end_if %>
+                    <% if $ElementLink.URL %></a><% end_if %>
                 <div class="card-body">
                     <% if $Title && $ShowTitle %><h3 class="card-title">$Title</h3><% end_if %>
                     <% if $Content %><div class="card-text">$Content</div><% end_if %>
-                    <% if $ElementLink %><p>$ElementLink</p><% end_if %>
                 </div>
 \            </div>
             <% if $MultipleOf(4,1) && not Last %>
