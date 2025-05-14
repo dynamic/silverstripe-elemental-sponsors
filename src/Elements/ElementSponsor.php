@@ -68,6 +68,13 @@ class ElementSponsor extends BaseElement
     /**
      * @var array
      */
+    private static $owns = [
+        'Sponsors',
+    ];
+
+    /**
+     * @var array
+     */
     private static $defaults = array(
         'Limit' => 0,
     );
