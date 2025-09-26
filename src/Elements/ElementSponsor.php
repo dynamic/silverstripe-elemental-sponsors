@@ -116,7 +116,7 @@ class ElementSponsor extends BaseElement
      */
     public function getType()
     {
-        return _t(__CLASS__.'.BlockType', 'Sponsors');
+        return _t(__CLASS__ . '.BlockType', 'Sponsors');
     }
 
     /**

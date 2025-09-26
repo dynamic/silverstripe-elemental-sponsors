@@ -11,7 +11,6 @@ use SilverStripe\Admin\ModelAdmin;
  */
 class SponsorsAdmin extends ModelAdmin
 {
-
     /**
      * @var array
      */
