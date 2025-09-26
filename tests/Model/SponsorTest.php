@@ -38,27 +38,44 @@ class SponsorTest extends SapphireTest
         $this->assertInstanceOf(ValidationResult::class, $result);
         $this->assertFalse($result->isValid(), 'Sponsor with empty title should fail validation');
         $this->assertNotEmpty($result->getMessages(), 'Validation should return error messages');
-
+        
         // Verify the error message contains expected text
-        $messages = $result->getMessages();
-        $errorFound = false;
-        foreach ($messages as $message) {
-            if (is_array($message) && isset($message['message'])) {
-                if (strpos($message['message'], 'title is required') !== false) {
-                    $errorFound = true;
-                    break;
-                }
-            } elseif (is_string($message) && strpos($message, 'title is required') !== false) {
-                $errorFound = true;
-                break;
-            }
-        }
-        $this->assertTrue($errorFound, 'Validation error should mention required title');
+        $this->assertTrue(
+            $this->hasValidationMessage($result->getMessages(), 'title is required'),
+            'Validation error should mention required title'
+        );
 
         // Test that valid title passes validation
         $sponsor = $this->objFromFixture(Sponsor::class, 'five');
         $result = $sponsor->validate();
         $this->assertInstanceOf(ValidationResult::class, $result);
         $this->assertTrue($result->isValid(), 'Sponsor with valid title should pass validation');
+    }
+
+    /**
+     * Helper method to check if validation messages contain expected text
+     * Addresses GitHub Copilot feedback to reduce code duplication
+     * 
+     * @param array $messages ValidationResult messages
+     * @param string $expectedText Text to search for (case-insensitive)
+     * @return bool
+     */
+    private function hasValidationMessage(array $messages, string $expectedText): bool
+    {
+        foreach ($messages as $message) {
+            $messageText = '';
+            
+            if (is_array($message) && isset($message['message'])) {
+                $messageText = $message['message'];
+            } elseif (is_string($message)) {
+                $messageText = $message;
+            }
+            
+            if (stripos($messageText, $expectedText) !== false) {
+                return true;
+            }
+        }
+        
+        return false;
     }
 }
