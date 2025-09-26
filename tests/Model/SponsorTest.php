@@ -38,7 +38,7 @@ class SponsorTest extends SapphireTest
         $this->assertInstanceOf(ValidationResult::class, $result);
         $this->assertFalse($result->isValid(), 'Sponsor with empty title should fail validation');
         $this->assertNotEmpty($result->getMessages(), 'Validation should return error messages');
-        
+
         // Verify the error message contains expected text
         $this->assertTrue(
             $this->hasValidationMessage($result->getMessages(), 'title is required'),
@@ -55,7 +55,7 @@ class SponsorTest extends SapphireTest
     /**
      * Helper method to check if validation messages contain expected text
      * Addresses GitHub Copilot feedback to reduce code duplication
-     * 
+     *
      * @param array $messages ValidationResult messages
      * @param string $expectedText Text to search for (case-insensitive)
      * @return bool
@@ -64,18 +64,18 @@ class SponsorTest extends SapphireTest
     {
         foreach ($messages as $message) {
             $messageText = '';
-            
+
             if (is_array($message) && isset($message['message'])) {
                 $messageText = $message['message'];
             } elseif (is_string($message)) {
                 $messageText = $message;
             }
-            
+
             if (stripos($messageText, $expectedText) !== false) {
                 return true;
             }
         }
-        
+
         return false;
     }
 }
