@@ -54,7 +54,7 @@ class SponsorTest extends SapphireTest
 
     /**
      * Helper method to check if validation messages contain expected text
-     * Addresses GitHub Copilot feedback to reduce code duplication
+     * Reduces code duplication when checking validation message content
      *
      * @param array $messages ValidationResult messages
      * @param string $expectedText Text to search for (case-insensitive)
