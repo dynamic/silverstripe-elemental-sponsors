@@ -2,8 +2,7 @@
 
 Sponsors element for the [SilverStripe Elemental](https://github.com/dnadesign/silverstripe-elemental) module
 
-[![CI](https://github.com/dynamic/silverstripe-elemental-sponsors/actions/workflows/ci.yml/badge.svg)](https://github.com/dynamic/silverstripe-elemental-sponsors/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/dynamic/silverstripe-elemental-sponsors/branch/master/graph/badge.svg)](https://codecov.io/gh/dynamic/silverstripe-elemental-sponsors)
+[![CI](https://github.com/dynamic/silverstripe-elemental-sponsors/actions/workflows/ci.yml/badge.svg)](https://github.com/dynamic/silverstripe-elemental-sponsors/actions/workflows/ci.yml) [![Sponsors](https://img.shields.io/badge/GitHub-Sponsors-ff69b4?logo=github)](https://github.com/sponsors/dynamic)
 
 [![Latest Stable Version](https://poser.pugx.org/dynamic/silverstripe-elemental-sponsors/v/stable)](https://packagist.org/packages/dynamic/silverstripe-elemental-sponsors)
 [![Total Downloads](https://poser.pugx.org/dynamic/silverstripe-elemental-sponsors/downloads)](https://packagist.org/packages/dynamic/silverstripe-elemental-sponsors)
