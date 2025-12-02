@@ -28,12 +28,12 @@ class ElementSponsor extends BaseElement
     /**
      * @var string
      */
-    private static $singular_name = 'Sponsors Element';
+    private static $singular_name = 'Sponsors';
 
     /**
      * @var string
      */
-    private static $plural_name = 'Sponsors Elements';
+    private static $plural_name = 'Sponsors Blocks';
 
     /**
      * @var string
@@ -109,14 +109,6 @@ class ElementSponsor extends BaseElement
         $blockSchema = parent::provideBlockSchema();
         $blockSchema['content'] = $this->getSummary();
         return $blockSchema;
-    }
-
-    /**
-     * @return string
-     */
-    public function getType()
-    {
-        return _t(__CLASS__ . '.BlockType', 'Sponsors');
     }
 
     /**
