@@ -18,7 +18,7 @@
     "require": {
         "dnadesign/silverstripe-elemental": "^6",
         "dynamic/silverstripe-elemental-baseobject": "^6",
-        "symbiote/silverstripe-gridfieldextensions": "^4",
+        "symbiote/silverstripe-gridfieldextensions": "^5",
         "silverstripe/vendor-plugin": "^3"
     },
     "require-dev": {
