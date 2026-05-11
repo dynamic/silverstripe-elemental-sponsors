@@ -6,6 +6,7 @@ use Dynamic\BaseObject\Model\BaseElementObject;
 use Dynamic\Elements\Sponsors\Elements\ElementSponsor;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Control\Director;
+use SilverStripe\Core\Validation\ValidationResult;
 use SilverStripe\Forms\FieldList;
 
 /**
@@ -54,9 +55,9 @@ class Sponsor extends BaseElementObject
     }
 
     /**
-     * @return \SilverStripe\ORM\ValidationResult
+     * @return ValidationResult
      */
-    public function validate()
+    public function validate(): ValidationResult
     {
         $result = parent::validate();
 
