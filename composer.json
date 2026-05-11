@@ -1,42 +1,48 @@
 {
-  "name": "dynamic/silverstripe-elemental-sponsors",
-  "description": "Display a list of sponsor logos with links.",
-  "license": "BSD-3-Clause",
-  "type": "silverstripe-vendormodule",
-  "keywords": [
-    "silverstripe",
-    "sponsors",
-    "elemental"
-  ],
-  "authors": [
-    {
-      "name": "Dynamic",
-      "email": "dev@dynamicagency.com",
-      "homepage": "https://www.dynamicagency.com"
-    }
-  ],
-  "require": {
-    "dnadesign/silverstripe-elemental": "^5",
-    "dynamic/silverstripe-elemental-baseobject": "^5",
-    "symbiote/silverstripe-gridfieldextensions": "^4"
-  },
-  "require-dev": {
-    "silverstripe/recipe-testing": "^3"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "autoload": {
-    "psr-4": {
-      "Dynamic\\Elements\\Sponsors\\": "src/",
-      "Dynamic\\Elements\\Sponsors\\Test\\": "tests/"
-    }
-  },
-  "config": {
-    "allow-plugins": {
-      "composer/installers": true,
-      "silverstripe/recipe-plugin": true,
-      "silverstripe/vendor-plugin": true
+    "name": "dynamic/silverstripe-elemental-sponsors",
+    "description": "Display a list of sponsor logos with links.",
+    "license": "BSD-3-Clause",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "sponsors",
+        "elemental"
+    ],
+    "authors": [
+        {
+            "name": "Dynamic",
+            "email": "dev@dynamicagency.com",
+            "homepage": "https://www.dynamicagency.com"
+        }
+    ],
+    "require": {
+        "dnadesign/silverstripe-elemental": "^6",
+        "dynamic/silverstripe-elemental-baseobject": "^6",
+        "symbiote/silverstripe-gridfieldextensions": "^4",
+        "silverstripe/vendor-plugin": "^3"
     },
-    "process-timeout": 600
-  }
+    "require-dev": {
+        "silverstripe/recipe-testing": "^4"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Dynamic\\Elements\\Sponsors\\": "src/",
+            "Dynamic\\Elements\\Sponsors\\Test\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/recipe-plugin": true,
+            "silverstripe/vendor-plugin": true
+        },
+        "process-timeout": 600
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.x-dev"
+        }
+    }
 }

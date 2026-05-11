@@ -12,8 +12,8 @@ Sponsors element for the [SilverStripe Elemental](https://github.com/dnadesign/s
 
 ## Requirements
 
-* dnadesign/silverstripe-elemental ^5
-* dynamic/silverstripe-elemental-baseobject ^5
+* dnadesign/silverstripe-elemental ^6
+* dynamic/silverstripe-elemental-baseobject ^6
 * symbiote/silverstripe-gridfieldextensions ^4
 
 ## Installation
