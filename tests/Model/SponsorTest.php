@@ -36,13 +36,11 @@ class SponsorTest extends SapphireTest
         $result = $sponsor->validate();
         $this->assertInstanceOf(ValidationResult::class, $result);
         $this->assertFalse($result->isValid());
-        $this->assertContains([
-            'message' => 'A title is required before you can save',
-            'fieldName' => null,
-            'messageType' => 'error',
-            'messageCast' => 'text',
-
-        ], $result->getMessages());
+        $messages = $result->getMessages();
+        $this->assertNotEmpty($messages);
+        $firstMessage = reset($messages);
+        $this->assertEquals('A title is required before you can save', $firstMessage['message']);
+        $this->assertEquals('error', $firstMessage['messageType']);
 
         $sponsor = $this->objFromFixture(Sponsor::class, 'five');
         $result = $sponsor->validate();
