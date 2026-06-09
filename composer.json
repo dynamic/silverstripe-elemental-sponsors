@@ -29,7 +29,7 @@
     "autoload": {
         "psr-4": {
             "Dynamic\\Elements\\Sponsors\\": "src/",
-            "Dynamic\\Elements\\Sponsors\\Test\\": "tests/"
+            "Dynamic\\Elements\\Sponsors\\Tests\\": "tests/"
         }
     },
     "config": {
@@ -42,7 +42,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "5.x-dev"
+            "dev-5": "5.x-dev"
         }
     }
 }

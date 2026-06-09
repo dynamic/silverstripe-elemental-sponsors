@@ -5,7 +5,7 @@ namespace Dynamic\Elements\Sponsors\Tests\Model;
 use Dynamic\Elements\Sponsors\Model\Sponsor;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\ORM\ValidationResult;
+use SilverStripe\Core\Validation\ValidationResult;
 
 /**
  * Class SponsorTest
