@@ -16,6 +16,7 @@
         }
     ],
     "require": {
+        "php": "^8.3",
         "dnadesign/silverstripe-elemental": "^6",
         "dynamic/silverstripe-elemental-baseobject": "^6",
         "symbiote/silverstripe-gridfieldextensions": "^5",
