@@ -128,8 +128,8 @@ class ElementSponsor extends BaseElement
                 if ($this->exists()) {
                     $config = $fields->dataFieldByName('Sponsors')->getConfig();
                     $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
-                    $config->addComponent(new GridFieldAddExistingSearchButton());
-                    $config->addComponent(new GridFieldOrderableRows('SponsorSort'));
+                    $config->addComponent(GridFieldAddExistingSearchButton::create());
+                    $config->addComponent(GridFieldOrderableRows::create('SponsorSort'));
                 }
             }
         );
